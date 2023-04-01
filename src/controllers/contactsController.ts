@@ -105,6 +105,7 @@ export const deleteContact = (req: Request, res: Response) => {
 
 export const deleteAllContacts = (req: Request, res: Response) => {
   contacts.splice(0, contacts.length);
+  fs.writeFileSync(contactsPath, JSON.stringify(contacts));
 
   res.statusCode = 200;
   res.send({ message: 'All contacts deleted successfully' });
