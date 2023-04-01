@@ -1,0 +1,38 @@
+### Get All Contacts
+GET http://localhost:3000/api/contacts HTTP/1.1
+
+### Get Contact By ID
+@id = _
+GET http://localhost:3000/api/contacts/{id} HTTP/1.1
+
+### Add Contact
+POST http://localhost:3000/api/contacts HTTP/1.1
+Content-Type: application/json
+
+{
+  "name": "Jajang",
+  "email": "jajang@example.com",
+  "phone": "93012930401"
+}
+
+### Add Empty Contact
+POST http://localhost:3000/api/contacts HTTP/1.1
+Content-Type: application/json
+
+{}
+
+### Edit Contact
+PUT http://localhost:3000/api/contacts/{id} HTTP/1.1
+Content-Type: application/json
+
+{
+  "name": "Fahrul",
+  "email": "fahrul@example.com",
+  "phone": "084919830102"
+}
+
+### Delete Contact
+DELETE http://localhost:3000/api/contacts/3 HTTP/1.1
+
+### Delete All Contacts
+POST http://localhost:3000/api/contacts/delete-all HTTP/1.1
